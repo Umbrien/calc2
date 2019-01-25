@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">calc2</string>
+    <string name="firstInput">Число</string>
+    <string name="secondInput">Число2 второе</string>
+    <string name="sumDefaultValue">тут будут циферки</string>
+
+    <string name="plusBtnValue">+плюс</string>
+    <string name="minusBtnValue">-мин-ус-</string>
+    <string name="multiplyBtnValue">умножиц*</string>
+    <string name="divideBtnValue">/слэш/</string>
 </resources>
