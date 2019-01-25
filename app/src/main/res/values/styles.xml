@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FirstInputTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#0022FF</item>
+        <item name="android:textColorHint">#67DF2D</item>
+    </style>
+
+    <style name="SecondInputTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#C800FF</item>
+    </style>
+
+</resources>

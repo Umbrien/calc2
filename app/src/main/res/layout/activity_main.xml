@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/topLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/firstInput"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:hint="Число"
+                android:inputType="numberSigned|numberDecimal"
+                android:theme="@style/FirstInputTheme"/>
+
+            <EditText
+                android:id="@+id/secondInput"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:hint="Число2 второе"
+                android:inputType="numberSigned|numberDecimal"
+                android:textColor="#fff"
+                android:theme="@style/SecondInputTheme" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstBtnsLine"
+            android:layout_below="@id/topLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/sumBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="+плюс"
+                android:onClick="calculate"/>
+            <Button
+                android:id="@+id/minusBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-мин-ус-"
+                android:background="@drawable/background_gradient"
+                android:onClick="calculate"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondBtnsLine"
+            android:layout_below="@id/firstBtnsLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/multiplyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_weight="3"
+                android:text="умножиц*"
+                android:onClick="calculate"/>
+            <Button
+                android:id="@+id/divideBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="/слэш/"
+                android:onClick="calculate"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sumTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondBtnsLine"
+            android:gravity="right"
+            android:text="тут будут циферки"
+            android:textSize="50dp"
+            android:layout_marginBottom="60dp"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
