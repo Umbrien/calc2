@@ -23,22 +23,40 @@ public class MainActivity extends AppCompatActivity {
     public void calculate(android.view.View view) {
         String t1Txt = t1.getText().toString();
         String t2Txt = t2.getText().toString();
+        double rounded;
 
         if (t1Txt.equals("") || t2Txt.equals("")) {
             sum.setText("Два заполни инпута");
         } else {
             switch (view.getId()) {
                 case R.id.sumBtn:
-                    sum.setText(Double.parseDouble(t1Txt) + Double.parseDouble(t2Txt) + "");
+                    rounded = Math.round(Double.parseDouble(t1Txt) + Double.parseDouble(t2Txt));
+
+                    if (rounded == Double.parseDouble(t1Txt) + Double.parseDouble(t2Txt)) {
+                        sum.setText(Math.round(Double.parseDouble(t1Txt) + Double.parseDouble(t2Txt)) + "");
+                    } else sum.setText(Double.parseDouble(t1Txt) + Double.parseDouble(t2Txt) + "");
                     break;
                 case R.id.minusBtn:
-                    sum.setText(Double.parseDouble(t1Txt) - Double.parseDouble(t2Txt) + "");
+                    rounded = Math.round(Double.parseDouble(t1Txt) - Double.parseDouble(t2Txt));
+
+                    if (rounded == Double.parseDouble(t1Txt) - Double.parseDouble(t2Txt)) {
+                        sum.setText(Math.round(Double.parseDouble(t1Txt) - Double.parseDouble(t2Txt)) + "");
+                    } else sum.setText(Double.parseDouble(t1Txt) - Double.parseDouble(t2Txt) + "");
                     break;
                 case R.id.multiplyBtn:
-                    sum.setText(Double.parseDouble(t1Txt) * Double.parseDouble(t2Txt) + "");
+                    rounded = Math.round(Double.parseDouble(t1Txt) * Double.parseDouble(t2Txt));
+
+                    if (rounded == Double.parseDouble(t1Txt) * Double.parseDouble(t2Txt)) {
+                        sum.setText(Math.round(Double.parseDouble(t1Txt) * Double.parseDouble(t2Txt)) + "");
+                    } else sum.setText(Double.parseDouble(t1Txt) * Double.parseDouble(t2Txt) + "");
                     break;
                 case R.id.divideBtn:
-                    sum.setText(Double.parseDouble(t1Txt) / Double.parseDouble(t2Txt) + "");
+                    rounded = Math.round(Double.parseDouble(t1Txt) / Double.parseDouble(t2Txt));
+
+                    if (rounded == Double.parseDouble(t1Txt) / Double.parseDouble(t2Txt)) {
+                        sum.setText(Math.round(Double.parseDouble(t1Txt) / Double.parseDouble(t2Txt)) + "");
+                    } else sum.setText(Double.parseDouble(t1Txt) / Double.parseDouble(t2Txt) + "");
+                    break;
                 }
             }
         }
